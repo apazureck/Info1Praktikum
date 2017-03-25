@@ -1,0 +1,8 @@
+{
+    "version": "0.1.0",
+    "command": "gcc",
+    "isShellCommand": true,
+    "showOutput": "always",
+    "args": ["${file}", "-g", "-o", "bin\\out.exe"],
+    "echoCommand": true
+}
