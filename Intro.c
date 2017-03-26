@@ -24,7 +24,7 @@ int main(void)
     else
         printf("Hey young fellow!");
 
-    fflush(stdin);
+    fflush(stdin)
     getchar();
     return 0;
 }

@@ -1,17 +1,16 @@
 /**********************************************************************\
-* Kurzbeschreibung: Uebung: 1.1; Punkte: 0
+* Kurzbeschreibung: Uebung: 5.2.1; Punkte: 0
 *
 * Datum:       Autor:               Grund der Aenderung:
-* 25.03.2017   Andreas Pazureck     Neuerstellung
+* 26.03.2017   Andreas Pazureck     Neuerstellung
 \**********************************************************************/
 #include <stdio.h>
 
 /*--- Funktionsdefinitionen ------------------------------------------*/
 int main(void)
 {
-    printf("     Hauptmenue\n     ==========\n");
-    printf("[A]endern\n[B]eenden\n[D]rucken\n[E]ingeben\n[L]oeschen\n\nWas wuenschen Sie zu tun ?");
-
+    printf("Number 1: %lf\n", 18.0/2*(4+5)/(9-6)/100*(6+8/4));
+    printf("Number 2: %lf\n", (4.0-10+(100+100-40+80)/5/2/4+36)/((90-30)/(10-5)));
     fflush(stdin);
     getchar();
     return 0;
