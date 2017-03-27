@@ -69,10 +69,10 @@ int main(void)
     printf("4. Wert: %d\n", wert);
 
     // 5. ob der Wert der unsigned short-Variablen u durch 4 teilbar ist
-    u = 44;
+    u = 43;
 
     wert = 1;
-    if(u & 0x3)
+    if (u & 0x3)
         wert = 0;
 
     printf("4. Wert: %d\n", wert);

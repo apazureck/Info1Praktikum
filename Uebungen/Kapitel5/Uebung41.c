@@ -16,9 +16,7 @@ int main(void)
     // 1. ob der Wert der Variablen a im Intervall [-20,100] liegt
     a = -15;
 
-    if (a >= -20)
-        wert = 1;
-    else if (a <= 100)
+    if (a >= -20 && a <= 100)
         wert = 1;
     else
         wert = 0;
@@ -32,18 +30,6 @@ int main(void)
 
     if (x < 0)
     {
-        if (x >= 5 && x <= 30)
-            wert = 1;
-        else
-            wert = 0;
-    }
-    else
-        wert = 0;
-
-    printf("2.1. Wert: %d\n", wert);
-
-    if (y < 0)
-    {
         if (y >= 5 && y <= 30)
             wert = 1;
         else
@@ -52,7 +38,7 @@ int main(void)
     else
         wert = 0;
 
-    printf("2.2. Wert: %d\n", wert);
+    printf("2. Wert: %d\n", wert);
 
     // 3. ob Wert der ganzzahligen Variablen z ungerade ist und zugleich auch durch 3 und 5 teilbar ist
 
@@ -86,8 +72,9 @@ int main(void)
 
     a = 25;
     b = 10;
+    wert = 0;
 
-    if (a * b > 255)
+    if (a * b <= 255)
         wert = 1;
     else
         wert = 0;
@@ -99,7 +86,7 @@ int main(void)
     antwort = 'A';
     wert = 0;
 
-    if(antwort == 'j' || antwort == 'J')
+    if(antwort != 'j' || antwort != 'J')
         wert = 1;
 
     printf("6. Wert: %d\n", wert);
