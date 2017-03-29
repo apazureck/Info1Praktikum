@@ -9,9 +9,16 @@
 /*--- Funktionsdefinitionen ------------------------------------------*/
 int main(void)
 {
-    printf("Number 1: %i\n", (18/2*(4+5)/(9-6))%(6+8/4));
-    printf("Number 2: %i\n", (4-10+(100+100-40+80)/5/2/4+36)/((90-30)/(10-5)));
+    unsigned short x = 0x12ab, y = 0, z = 0;
+    printf("Initial Value: 0x%X\n", x);
+    y = x >> 8;
+    // printf("%X\n", y);
+    z = (x & 0xFF);
+    z = z << 8;
+    // printf("%X\n", z);
+    x = y | z;
+    printf("New Value:     0x%X\n", x);
     fflush(stdin);
-    getchar(); 
+    getchar();
     return 0;
 }
