@@ -3,6 +3,6 @@
     "command": "gcc",
     "isShellCommand": true,
     "showOutput": "always",
-    "args": ["${file}", "-g", "-o", "bin\\out.exe"],
+    "args": ["${file}", "-g", "-o", "bin\\out.exe", "-lm"],
     "echoCommand": true
 }
