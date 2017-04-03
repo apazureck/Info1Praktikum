@@ -16,10 +16,7 @@ int main(void)
     // 1. ob der Wert der Variablen a im Intervall [-20,100] liegt
     a = -15;
 
-    if (a >= -20 && a <= 100)
-        wert = 1;
-    else
-        wert = 0;
+    wert = a >= -20 && a <= 100;
 
     printf("1. Wert: %d\n", wert);
 
@@ -28,15 +25,7 @@ int main(void)
     x = 1;
     y = 7;
 
-    if (x < 0)
-    {
-        if (y >= 5 && y <= 30)
-            wert = 1;
-        else
-            wert = 0;
-    }
-    else
-        wert = 0;
+    wert = x < 0 && y >= 5 && y <= 30;
 
     printf("2. Wert: %d\n", wert);
 
@@ -45,13 +34,7 @@ int main(void)
     z = 15;
     wert = 0;
 
-    if (z % 2 != 0)
-    {
-        if (z % 3 == 0 && z % 5 == 0)
-        {
-            wert = 1;
-        }
-    }
+    wert = z % 2 != 0 && z % 3 == 0 && z % 5 == 0;
 
     printf("3. Wert: %d\n", wert);
 
@@ -60,10 +43,7 @@ int main(void)
     jahr = 2100;
     wert = 0;
 
-    if (jahr % 400 == 0 || (jahr % 4 == 0) && (jahr % 100 != 0))
-    {
-        wert = 1;
-    }
+    wert = jahr % 400 == 0 || (jahr % 4 == 0) && (jahr % 100 != 0);
 
     printf("4. Wert: %d\n", wert);
 
@@ -74,10 +54,7 @@ int main(void)
     b = 10;
     wert = 0;
 
-    if (a * b <= 255)
-        wert = 1;
-    else
-        wert = 0;
+    wert = a * b <= 255;
 
     printf("5. Wert: %d\n", wert);
 
@@ -86,8 +63,7 @@ int main(void)
     antwort = 'A';
     wert = 0;
 
-    if(antwort != 'j' || antwort != 'J')
-        wert = 1;
+    wert = antwort != 'j' || antwort != 'J';
 
     printf("6. Wert: %d\n", wert);
 
@@ -97,8 +73,7 @@ int main(void)
 
     wert = 1;
 
-    if(zaehler >= 5 && zaehler <= 25)
-        wert = 0;
+    wert = zaehler >= 5 && zaehler <= 25;
 
     printf("7. Wert: %d\n", wert);
 
