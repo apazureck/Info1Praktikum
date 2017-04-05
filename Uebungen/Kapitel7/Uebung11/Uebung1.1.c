@@ -2,7 +2,7 @@
 * Kurzbeschreibung: Uebung: 7.1.1; Punkte: 0
 *
 * Datum:       Autor:               Grund der Aenderung:
-* 29.03.2017   Andreas Pazureck     Neuerstellung
+* 05.04.2017   Andreas Pazureck     Neuerstellung
 \**********************************************************************/
 #include <stdio.h>
 #include "vumrech.h"
