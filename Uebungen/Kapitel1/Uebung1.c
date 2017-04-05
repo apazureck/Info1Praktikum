@@ -9,6 +9,7 @@
 /*--- Funktionsdefinitionen ------------------------------------------*/
 int main(void)
 {
+    // testcomment
     printf("     Hauptmenue\n     ==========\n");
     printf("[A]endern\n[B]eenden\n[D]rucken\n[E]ingeben\n[L]oeschen\n\nWas wuenschen Sie zu tun ?");
 
