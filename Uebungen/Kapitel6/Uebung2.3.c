@@ -1,8 +1,8 @@
 /**********************************************************************\
-* Kurzbeschreibung: Uebung: 5.6.2; Punkte: 0
+* Kurzbeschreibung: Uebung: 6.2.3; Punkte: 0
 *
 * Datum:       Autor:               Grund der Aenderung:
-* 29.03.2017   Andreas Pazureck     Neuerstellung
+* 03.04.2017   Andreas Pazureck     Neuerstellung
 \**********************************************************************/
 #include <stdio.h>
 #include <math.h>
@@ -12,6 +12,7 @@
 /*--- Funktionsdefinitionen ------------------------------------------*/
 int main(void)
 {
+
     int invtime;
     double seedmoney, interest, resultingInterest;
     double const den = 100 * 360;
