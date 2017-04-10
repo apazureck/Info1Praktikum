@@ -1,5 +1,5 @@
 /**********************************************************************\
-* Kurzbeschreibung: Uebung: 8.1.1; Punkte: 0
+* Kurzbeschreibung: Uebung: 8.2.1; Punkte: 0
 *
 * Datum:       Autor:               Grund der Aenderung:
 * 10.04.2017   Andreas Pazureck     Neuerstellung
