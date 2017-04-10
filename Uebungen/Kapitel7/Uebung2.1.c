@@ -9,12 +9,12 @@
 /*--- Funktionsdefinitionen ------------------------------------------*/
 int main(void)
 {
-    char input[6];
+    int input0, input1, input2, input3, input4;
 
     printf("Gib eine 5-Stellige Zahl ein: ");
-    scanf("%5s", input);
+    scanf("%1d%1d%1d%1d%1d", &input0, &input1, &input2, &input3, &input4);
 
-    printf("Die Quersumme dieser Zahl ist %d", input[0] + input[1] + input[2] + input[3] + input[4] - 5 * 48);
+    printf("Die Quersumme dieser Zahl ist %d", input0 + input1 + input2 + input3 + input4);
 
     fflush(stdin);
     getchar();
