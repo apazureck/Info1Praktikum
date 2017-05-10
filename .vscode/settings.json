@@ -4,7 +4,7 @@
         "warning": "Warning",
         "style": "Information",
         "performance": "Warning",
-        "portability": "Error",
+        "portability": "None",
         "information": "Information"
     }
 }
