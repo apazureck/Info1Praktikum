@@ -1,3 +1,10 @@
-// Place your settings in this file to overwrite default and user settings.
 {
+    "cppcheck.severityLevels": {
+        "error": "Error",
+        "warning": "Warning",
+        "style": "Information",
+        "performance": "Warning",
+        "portability": "Error",
+        "information": "Information"
+    }
 }
