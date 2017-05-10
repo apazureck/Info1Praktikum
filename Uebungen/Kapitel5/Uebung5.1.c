@@ -12,6 +12,9 @@ int printbinary(int);
 
 int main(void)
 {
+    // 1111 1111 0000 0000
+    // 1011 1001 1001 1110
+    // 1011 1001 0000 0000
     int wert;
     short x, u;
 
@@ -58,13 +61,13 @@ int main(void)
 
     // 4. ob der Wert der short-Variablen x im Intervall [0,127] liegt
 
-    x = 0;
+    x = 5;
     wert = 1;
 
     printbinary(x);
     printbinary(0xFF80);
-    if (x & 0xFF80)
-        wert = 0;
+
+    wert = !(x & 0xFF80);
 
     printf("4. Wert: %d\n", wert);
 

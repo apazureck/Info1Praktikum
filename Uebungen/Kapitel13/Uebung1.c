@@ -1,5 +1,5 @@
 /**********************************************************************\
-* Kurzbeschreibung: Uebung: 1.1; Punkte: 0
+* Kurzbeschreibung: Uebung: 13.1; Punkte: 0
 *
 * Datum:       Autor:               Grund der Aenderung:
 * 25.03.2017   Andreas Pazureck     Neuerstellung

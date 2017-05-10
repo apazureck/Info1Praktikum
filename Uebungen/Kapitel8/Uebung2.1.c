@@ -26,6 +26,7 @@ int main(void)
 
     total = k1 + k2 + k3 + k4;
 
+    double var = k1;
     printf("1. Kandidat: %.2lf%%\n", (double)k1 / total * 100);
     printf("1. Kandidat: %.2lf%%\n", (double)k2 / total * 100);
     printf("1. Kandidat: %.2lf%%\n", (double)k3 / total * 100);

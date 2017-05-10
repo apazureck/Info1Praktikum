@@ -43,7 +43,7 @@ int main(void)
     jahr = 2100;
     wert = 0;
 
-    wert = jahr % 400 == 0 || (jahr % 4 == 0) && (jahr % 100 != 0);
+    wert = (jahr % 4 == 0) && (jahr % 100 != 0);
 
     printf("4. Wert: %d\n", wert);
 
@@ -73,7 +73,7 @@ int main(void)
 
     wert = 1;
 
-    wert = zaehler >= 5 && zaehler <= 25;
+    wert = zaehler < 5 || zaehler > 25;
 
     printf("7. Wert: %d\n", wert);
 
