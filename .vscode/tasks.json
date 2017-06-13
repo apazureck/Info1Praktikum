@@ -4,16 +4,28 @@
     "isShellCommand": true,
     "showOutput": "always",
     "args": ["${file}", "-g", "-o", "bin\\out.exe"],
-    "problemMatcher": {
-        "fileLocation": "absolute",
-        "pattern": {
-            "regexp": "^(.+?):(\\d+):(\\d+): (\\w)+: (.*)$",
-            "file": 1,
-            "line": 2,
-            "column": 3,
-            "severity": 4,
-            "message": 5
+    "problemMatcher": [{
+            "fileLocation": "absolute",
+            "pattern": {
+                "regexp": "^(.+?):(\\d+):(\\d+): error: (.*)$",
+                "file": 1,
+                "line": 2,
+                "column": 3,
+                "message": 4
+            },
+            "severity": "error"
+        },
+        {
+            "fileLocation": "absolute",
+            "pattern": {
+                "regexp": "^(.+?):(\\d+):(\\d+): warning: (.*)$",
+                "file": 1,
+                "line": 2,
+                "column": 3,
+                "message": 4
+            },
+            "severity": "warning"
         }
-    },
+    ],
     "echoCommand": true
 }
