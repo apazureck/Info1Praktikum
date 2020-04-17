@@ -19,7 +19,7 @@ gcc main.c
 
 ein. Dies sagt unserem compiler (gcc), dass wir die Datei main.c im aktuellen Ordner (Current Working Directory) compilieren möchten.
 
-<img src="https://elearning.ohmportal.de/pluginfile.php/473834/mod_folder/content/0/compile_gcc.gif" height="400px"/>
+<img src="https://raw.githubusercontent.com/apazureck/Info1Praktikum/master/moodlekurs/vscode/compile_gcc.gif" height="400px"/>
 
 Jetzt wurde eine Executable `a.exe` erstellt. Diese erscheint auch gleich im Datei Explorer (oben rechts). Wenn wir diese nun ausführen wollen, müssen wir im Terminal
 
@@ -29,6 +29,6 @@ Jetzt wurde eine Executable `a.exe` erstellt. Diese erscheint auch gleich im Dat
 
 eintippen. Das `./` am Anfang ist nötig, da Powershell sonst die Executable nicht findet. Es heißt soviel wie "Führe etwas im aktuellen Ordner aus".
 
-![Execute first program](https://elearning.ohmportal.de/pluginfile.php/473834/mod_folder/content/0/run_first_program.gif)
+<img src="https://raw.githubusercontent.com/apazureck/Info1Praktikum/master/moodlekurs/vscode/run_first_program.gif" width="100%"/>
 
 Nun erscheint die Ausgabe `Hello World` auf der Konsole.
