@@ -1,8 +1,12 @@
-Nachdem wir jetzt per Tastendruck ein Programm bauen können, möchten wir es natürlich auch einfach per Tastendruck laufen lassen können. Dazu können Sie in Visual Studio Code einfach die Taste `F5` drücken.
+Nachdem wir jetzt per Tastendruck ein Programm bauen können, möchten wir es natürlich auch einfach per Tastendruck laufen lassen können. Dazu können Sie in Visual Studio Code einfach die Taste `F5` drücken. Dazu müssen vorher ein paar Schritte erledigt werden.
+
+## 1. launch.json Datei erstellen
 
 Es erscheint nun ein Auswahlmenü. Dort Wählen Sie die Option mit `GDB/LLDB`. `GDB` ist unser Debugger. Dies ist, wie der Compiler auch, ein eigenständiges Programm auf der Festplatte.
 
 Danach möchte Visual Studio Code eine Konfiguration. Wählen Sie hier `gcc.exe - Aktive Datei erstellen und debuggen`. Dies erstellt nun eine Vorlage im `JSON` format. `JSON` steht für *Java Script Object Notation* und ist ein beliebtes Format, um Daten zu strukturieren.
+
+![Start Debug First Time](https://raw.githubusercontent.com/apazureck/Info1Praktikum/master/moodlekurs/vscode/start_debug_first_time.gif)
 
 Die Datei sollte in etwa so aussehen:
 
@@ -38,8 +42,6 @@ Die Datei sollte in etwa so aussehen:
 }
 ```
 
-![Start Debug First Time](start_debug_first_time.gif)
-
 In dieser Datei gibt es zwei wichtige Einträge:
 
 1. `"program": "${fileDirname}\\${fileBasenameNoExtension}.exe"` - Hier sagen Sie Visual Studio Code, welches Programm unser Debuger (`gdb`) ausführen soll. Nämlich unsere erstellte `.exe` Datei. Um immer die aktuelle Datei zu starten kann man in Visual Studio Code sogenannte Variablen übergeben. In diesem Fall der Ordnername `${fileDirname}` und der Dateiname `${fileBasenameNoExtension}` ohne die Endung `.c`, denn Sie wollen ja die `.exe` starten und nicht ihre Quelldatei.
@@ -47,11 +49,13 @@ In dieser Datei gibt es zwei wichtige Einträge:
 
 Wählen Sie nun ihre `main.c` Datei im Editor aus und drücken Sie erneut `F5`. Nun sollte eine Fehlermeldung erscheinen.
 
-![Start Debug Fails](start_debug_fails.gif)
+![Start Debug Fails](https://raw.githubusercontent.com/apazureck/Info1Praktikum/master/moodlekurs/vscode/start_debug_fails.gif)
+
+## 2. tasks.json erstellen
 
 Dieser Fehler kommt daher, dass es noch keine `task.json` mit einem Task gibt, der den Namen des Prelaunch Tasks `"gcc.exe build active file"` hat. Diesen können Sie erstellen, indem Sie auf *Configure Task* klicken. Danach können Sie auch hier eine Vorlage auswählen. In diesem Fall `C / C++: gcc.exe build active file`.
 
-![Create Task](create_task.json.gif)
+![Create Task](https://raw.githubusercontent.com/apazureck/Info1Praktikum/master/moodlekurs/vscode/create_task.json.gif)
 
 > **Hinweis**: Wenn Sie eine leere `tasks.json` Datei erhalten, dann löschen Sie diese und erstellen sie neu.
 
@@ -85,4 +89,6 @@ Nun erhalten Sie folgende Vorlage:
 
 Wenn Sie nun noch einmal `F5` drücken, so werden Sie noch einmal eine Fehlermeldung erhalten, dass der Task `"gcc.exe build active file"` nicht gefunden wurde. Dies liegt daran, dass Visual Studio Code in der `tasks.json` nach einem Task mit dem entsprechenden `label` Eintrag sucht. Wenn Sie die `tasks.json` Datei öffnen und nach dem `label` des Tasks schauen, werden Sie feststellen, dass dieses mit `C/C++: ` beginnt. Löschen Sie einfach das `C/C++`, speichern Sie die Datei mit `STRG + S` und Ihr Programm kann mit `F5` gestartet werden.
 
-![Run OK](run_ok.gif)
+![Run OK](https://raw.githubusercontent.com/apazureck/Info1Praktikum/master/moodlekurs/vscode/run_ok.gif)
+
+Nun sollte auf Ihrer Konsole die `printf` Funktion `Hello World` ausgeben.
