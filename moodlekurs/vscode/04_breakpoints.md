@@ -14,4 +14,4 @@ Zum Beispiel:
 
 gibt das Bitmuster der Konstanten `42` aus.
 
-![Debugging VSCode](debugging_vscode.gif)
+![Debugging VSCode](https://raw.githubusercontent.com/apazureck/Info1Praktikum/master/moodlekurs/vscode/debugging_vscode.gif)
