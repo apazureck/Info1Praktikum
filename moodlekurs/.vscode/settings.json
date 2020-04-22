@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.txt": "robot",
+        "*.resource": "robot",
+        "stdio.h": "c"
+    }
+}
