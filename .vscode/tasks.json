@@ -1,31 +1,27 @@
 {
-    "version": "0.1.0",
-    "command": "gcc",
-    "isShellCommand": true,
-    "showOutput": "always",
-    "args": ["${file}", "-g", "-o", "bin\\out.exe"],
-    "problemMatcher": [{
-            "fileLocation": "absolute",
-            "pattern": {
-                "regexp": "^(.+?):(\\d+):(\\d+): error: (.*)$",
-                "file": 1,
-                "line": 2,
-                "column": 3,
-                "message": 4
-            },
-            "severity": "error"
-        },
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
         {
-            "fileLocation": "absolute",
-            "pattern": {
-                "regexp": "^(.+?):(\\d+):(\\d+): warning: (.*)$",
-                "file": 1,
-                "line": 2,
-                "column": 3,
-                "message": 4
+            "type": "shell",
+            "label": "C/C++: gcc.exe build active file",
+            "command": "C:\\ProgramData\\chocolatey\\bin\\gcc.exe",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${workspaceFolder}\\bin\\${fileBasenameNoExtension}.exe",
+                "-std=c99",
+                "-Wall"
+            ],
+            "options": {
+                "cwd": "C:\\ProgramData\\chocolatey\\bin"
             },
-            "severity": "warning"
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build"
         }
-    ],
-    "echoCommand": true
+    ]
 }
