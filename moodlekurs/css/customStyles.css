@@ -1,0 +1,24 @@
+.cleanCodeInfo {
+  background: #d4ffd9;
+  border-color: #99f63c;
+  padding: 10px;
+  margin-left: 100px;
+  padding-left: 10px;
+  padding-left: 10px; 
+  padding-left: 25px;
+  min-height: 80px;
+  border-left-width: 5px;
+  border-left-style: solid;
+}
+
+.cleanCodeInfo::before {
+    background-image: url(https://raw.githubusercontent.com/apazureck/Info1Praktikum/3d2a3da23b3466e2f6b7f2206ba3c23a8d3fc97c/moodlekurs/cleanCode/clean_code_log.png);
+    background-size: 50px 80px;
+    background-repeat: none;
+    margin-left: -100px;
+    display: inline-block;
+    width: 50px; 
+    height: 80px;
+    content:"";
+    float:left;
+}
