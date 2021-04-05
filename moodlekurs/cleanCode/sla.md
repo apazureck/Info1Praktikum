@@ -1,4 +1,4 @@
-Um Ihre Funktionen lesbar zu halten, sollten Sie es vermeiden Low-Level Operationen, wie Bitoperationen, Vergleichsoperationen, oder logischen Operationen, usw. mit Aufrufen anderer Funktionen zu mischen.
+Um Ihre Funktionen lesbar zu halten, sollten Sie es vermeiden Low-Level Operationen, wie Bitoperationen, Vergleichsoperationen, oder logischen Operationen, usw. mit Aufrufen anderer Funktionen zu mischen. Dieses Konzept nennt man **S**ingle **L**evel of **A**bstraction (**SLA**).
 
 Lagern Sie diese am Besten in eigene Funktionen aus. Das hilft anderen Ihren Code besser zu verstehen. Verdeutlichen soll dies das Beispiel aus [Separation of Concerns](https://elearning.ohmportal.de/mod/page/view.php?id=361670):
 
@@ -119,3 +119,5 @@ int getUserAge() {
 ```
 
 Jetzt ist die `main`-Funktion auf einem noch höheren Abstraktionsnievau, da sie sich nicht einmal mehr mit dem Einlesen beschäftigen muss, sondern einfach nur das Alter abfragt und danach prüft, ob die Person schon erwachsen ist. Alle Prüfungen, ob der Wert korrekt eingelesen werden konnte, sind nun in der Funktion `getUserAge`.
+
+<a href="https://clean-code-developer.de/die-grade/orangener-grad/#Single_Level_of_Abstraction_SLA">Quelle: Clean Code Developer - Single Level of Abstraction (SLA)</a>
