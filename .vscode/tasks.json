@@ -9,11 +9,12 @@
             "command": "C:\\ProgramData\\chocolatey\\bin\\gcc.exe",
             "args": [
                 "-g",
-                "${file}",
+                "'${file}'",
                 "-o",
-                "${workspaceFolder}\\bin\\${fileBasenameNoExtension}.exe",
+                "'${workspaceFolder}\\bin\\${fileBasenameNoExtension}.exe'",
                 "-std=c99",
-                "-Wall"
+                "-Wall",
+                "-Werror=implicit-function-declaration"
             ],
             "options": {
                 "cwd": "C:\\ProgramData\\chocolatey\\bin"
@@ -21,7 +22,10 @@
             "problemMatcher": [
                 "$gcc"
             ],
-            "group": "build"
+            "group": {
+                "isDefault": true,
+                "kind": "build"
+            }
         }
     ]
 }

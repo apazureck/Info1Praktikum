@@ -2,15 +2,11 @@
 
 int main()
 {
-int i;
+    char c = -1;
 
-for (i = 0; i < 8; i++)
-{
-    printf("%d", i);
+    printf("%d", c >> 8);
+
+    c = 1;
     
-    if (i >= 3 && i <= 5)
-        continue;
-
-    printf(",");
-}
+    printf("%d", c >> 8);
 }
