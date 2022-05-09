@@ -2,3 +2,4 @@ node_modules
 bin
 debug.log
 *.pdb
+moodlekurs/htmls/test_homescreen.html

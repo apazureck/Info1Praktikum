@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.ggl": "javascript",
+        "math.h": "c",
+        "corecrt_math_defines.h": "c"
+    }
+}
