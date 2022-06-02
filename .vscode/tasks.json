@@ -6,7 +6,7 @@
         {
             "type": "shell",
             "label": "C/C++: gcc.exe build active file",
-            "command": "C:\\ProgramData\\chocolatey\\bin\\gcc.exe",
+            "command": "gcc",
             "args": [
                 "-g",
                 "'${file}'",
@@ -14,11 +14,9 @@
                 "'${workspaceFolder}\\bin\\${fileBasenameNoExtension}.exe'",
                 "-std=c99",
                 "-Wall",
-                "-Werror=implicit-function-declaration"
+                "-Werror=implicit-function-declaration",
+                "-lm"
             ],
-            "options": {
-                "cwd": "C:\\ProgramData\\chocolatey\\bin"
-            },
             "problemMatcher": [
                 "$gcc"
             ],
