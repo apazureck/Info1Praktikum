@@ -1,35 +1,54 @@
-/**********************************************************************\
-* Kurzbeschreibung: Uebung: 13.1; Punkte: 0
-*
-* Datum:       Autor:               Grund der Aenderung:
-* 25.03.2017   Andreas Pazureck     Neuerstellung
-\**********************************************************************/
 #include <stdio.h>
 #include "../headers/constants.h"
 
-/*--- Funktionsdefinitionen ------------------------------------------*/
-
 int main(void)
 {
-    unsigned int zahl, outzahl, quersumme = 0;
-    printf("Quersumme zu einer Zahl\n");
+    unsigned int zahl, error = 1, read = 1, quersumme = 0;
+    char input;
+    printf("Dieses Programm liest eine beliebig lange Zahl ein und gibt deren Quersumme aus.\n");
     printf("=======================\n\n");
 
-    printf("Zahl? ");
+    while (error)
+    {
+        printf("Geben Sie die Zahl ein, für die die Quersumme berechnet werden soll:\n\n");
 
-    while(!scanf("%u", &zahl)) {
-        printf("Zahl muss eine positive Ganzzahl sein.\nZahl? ");
-        fflush(stdin);
+        quersumme = 0;
+        read = 1;
+        while (read)
+        {
+            input = getchar();
+            switch (input)
+            {
+            case '0':
+            case '1':
+            case '2':
+            case '3':
+            case '4':
+            case '5':
+            case '6':
+            case '7':
+            case '8':
+            case '9':
+                zahl = input - '0';
+                quersumme += zahl;
+                break;
+            case '\n':
+                read = 0;
+                error = 0;
+                printf("Die Quersumme der Zahl ist: %u", quersumme);
+                break;
+            default:
+                printf("Fehlerhafte Eingabe!\n\n");
+                while (getchar() != '\n');
+                {
+                    
+                }                
+                read = 0;
+                break;
+            }
+        }
     }
+
     
-    outzahl = zahl;
-    quersumme += zahl % 10;
-
-    while(zahl = zahl/10)
-        quersumme += zahl % 10;
-
-    printf("Quersumme zu %u ist: %u", outzahl, quersumme);
-    fflush(stdin);
-    getchar();
     return 0;
 }

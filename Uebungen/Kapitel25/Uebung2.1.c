@@ -91,17 +91,17 @@ void printmatrix(double matrix[], int size[2])
 
 void matrixmultiplication(double a[], int sa[2], double b[], int sb[2], double c[])
 {
-    int n, m, k, rs = sa[0] * sb[1];
+    int rowA, colA, rowB, rs = sa[0] * sb[1];
     int ressize[2] = { sa[0], sb[1] };
 
-    for (n = 0; n < rs; n++)
-        c[n] = 0;
+    for (rowA = 0; rowA < rs; rowA++)
+        c[rowA] = 0;
 
     // Zeilen Matrix A
-    for (n = 0; n < sa[0]; n++)
+    for (rowA = 0; rowA < sa[0]; rowA++)
         // Zeilen Matrix B
-        for (k = 0; k < sb[1]; k++)
+        for (rowB = 0; rowB < sb[1]; rowB++)
             // Spalten Matrix A = Zeilen Matrix B
-            for (m = 0; m < sb[0]; m++)
-                c[n * ressize[1] + k] += a[n * sa[1] + m] * b[m * sb[1] + k];
+            for (colA = 0; colA < sb[0]; colA++)
+                c[rowA * ressize[1] + rowB] += a[rowA * sa[1] + colA] * b[colA * sb[1] + rowB];
 }
